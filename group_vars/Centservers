@@ -1,0 +1,7 @@
+#Variables for the Centservers group
+
+ username:
+      test:
+        uname: test
+        description: Test user account
+        password: "{{ secret }}"
