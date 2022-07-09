@@ -1,0 +1,11 @@
+---
+- name: using multiple conditions 
+  gather_facts: no
+  hosts: all
+  tasks:
+  - package:
+      name: mailx
+      state: installed
+    when:
+     - ansible distribution == "CentOs"
+     - ansible memfree mb > 256
